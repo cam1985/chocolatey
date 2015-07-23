@@ -1,4 +1,4 @@
-# http://boxstarter.org/package/url?
+# http://boxstarter.org/package/url?http://boxstarter.org/package/url?https://raw.githubusercontent.com/cam1985/chocolatey/master/boxstarter_chocolatey_standardpc.ps1
  
 #####################
 # BEGIN CONFIGURATION
