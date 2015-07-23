@@ -24,24 +24,24 @@ Install-ChocolateyPinnedTaskBarItem "$env:windir\system32\mstsc.exe"
 Enable-RemoteDesktop
 
 
-cinst chocolatey -y --acceptlicense
-cinst chocolateygui -y --acceptlicense
-cinst boxstarter -y --acceptlicense
+cinst chocolatey #-y --acceptlicense
+cinst chocolateygui #-y --acceptlicense
+cinst boxstarter #-y --acceptlicense
 
 # -- Add Windows Features
 cinst TelnetClient -source windowsFeatures
 
-cinst nuget.commandline -y --acceptlicense
-cinst wget -y --acceptlicense
+cinst nuget.commandline #-y --acceptlicense
+cinst wget #-y --acceptlicense
 
-cinst powershell -pre -y --acceptlicense
+cinst powershell -pre #-y --acceptlicense
 cup powershell -pre -yf --acceptlicense
-cinst sysinternals -y --acceptlicense
-cinst bginfo -y --acceptlicense
+cinst sysinternals #-y --acceptlicense
+cinst bginfo #-y --acceptlicense
 
-cinst silverlight -y --acceptlicense
-cinst vcredist2010 -y --acceptlicense
-cinst dotnet4.5 -y --acceptlicense
+cinst silverlight #-y --acceptlicense
+cinst vcredist2010 #-y --acceptlicense
+cinst dotnet4.5 #-y --acceptlicense
 
 # --  WINRM Setup --
 winrm quickconfig -q
@@ -51,37 +51,37 @@ winrm set winrm/config/service @{AllowUnencrypted="true"}
 winrm set winrm/config/service/auth @{Basic="true"}
 sc config WinRM start= auto
 
-cinst javaruntime -y --acceptlicense
+cinst javaruntime #-y --acceptlicense
 
 # -- Install Additional Browsers
-cinst googlechrome -y --acceptlicense
+cinst googlechrome #-y --acceptlicense
 Install-ChocolateyPinnedTaskBarItem "$($Boxstarter.programFiles86)\Google\Chrome\Application\chrome.exe"
 
-cinst firefox -y --acceptlicense
+cinst firefox #-y --acceptlicense
 
 # -- Install Adobe Products
-cinst flashplayeractivex -y --acceptlicense
-cinst flashplayerplugin -y --acceptlicense
-cinst adobeair -y --acceptlicense
-cinst adobereader -y --acceptlicense
+cinst flashplayeractivex #-y --acceptlicense
+cinst flashplayerplugin #-y --acceptlicense
+cinst adobeair #-y --acceptlicense
+cinst adobereader #-y --acceptlicense
 
 
-cinst malwarebytes -y --acceptlicense
+cinst malwarebytes #-y --acceptlicense
 
-cinst 7zip.install -y --acceptlicense
+cinst 7zip.install #-y --acceptlicense
 
-cinst vlc -y --acceptlicense
-cinst ccleaner -y --acceptlicense
+cinst vlc #-y --acceptlicense
+cinst ccleaner #-y --acceptlicense
 
-cinst notepadplusplus.install -y --acceptlicense
-cinst pdfcreator -y --acceptlicense
+cinst notepadplusplus.install #-y --acceptlicense
+cinst pdfcreator #-y --acceptlicense
 
-cinst ultravnc -y --acceptlicense
+cinst ultravnc #-y --acceptlicense
 
 # -- Optional Packages
-#cinst itunes -y --acceptlicense
-cinst dropbox -y --acceptlicense
-cinst console-devel -y --acceptlicense
+#cinst itunes #-y --acceptlicense
+cinst dropbox #-y --acceptlicense
+cinst console-devel #-y --acceptlicense
 Install-ChocolateyPinnedTaskBarItem "$env:programfiles\console\console.exe"
 
 # -- Install Windows Updates
