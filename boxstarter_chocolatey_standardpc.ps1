@@ -1,4 +1,4 @@
-# http://boxstarter.org/package/url?http://boxstarter.org/package/url?https://raw.githubusercontent.com/cam1985/chocolatey/master/boxstarter_chocolatey_standardpc.ps1
+# http://boxstarter.org/package/url?https://raw.githubusercontent.com/cam1985/chocolatey/master/boxstarter_chocolatey_standardpc.ps1
  
 #####################
 # BEGIN CONFIGURATION
@@ -85,7 +85,7 @@ cinst console-devel -y #--acceptlicense
 Install-ChocolateyPinnedTaskBarItem "$env:programfiles\console\console.exe"
 
 # -- Install Windows Updates
-Enable-MicrosoftUpda
+Enable-MicrosoftUpdate
 Install-WindowsUpdate -acceptEula
 
 } catch {
